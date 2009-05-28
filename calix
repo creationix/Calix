@@ -1,0 +1,2 @@
+cd /opt/calix
+python calix.py

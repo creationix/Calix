@@ -1,0 +1,42 @@
+I'm not sure of the official way to install python programs in linux.
+currently I install my own programs in /opt.  Here is how you can do the 
+same
+
+None of this is needed to actually run the program, you could just 
+untar it, open the new folder in a file browser and doubleclick on 
+timplayer.py, but that gets annoying after a while.
+
+1. Unzip this archive if you haven't already using:
+    tar -xzvf calix-0.1.0.tar.gz
+
+2. Move the folder to /opt (This requires superuser privileges on most 
+systems)
+    sudo mv calix /opt/
+
+3. If you installed it somewhere else you will need to update the 
+timplayer script to point to your new location.
+
+4. If you want system wide access from the command prompt:
+    cd /usr/bin  (or any folder in your path (maybe ~/.bin)
+    ln -s /opt/calix/calix
+
+5. Now you can run it from any command prompt as calix
+
+6. Add a .desktop file to your desktop or panel.  I put one on my top 
+panel in Gnome using the "Create cuatom launcher..." command using the 
+following:
+
+    Name: Calix
+    Command: '/opt/calix/calix' or 'calix' if in path
+    Icon: /opt/calix/pixmaps/icon.png
+
+7. Click on your new launcher and get calibrating the fun way.
+
+NOTE:
+ This is a python program and I recommend/require the following be 
+installed:
+
+    python 2.4 (I'm haven't tested it on older versions)
+    pygtk (a python module for the gui)
+    x server (needs to have xgamma utility)
+
